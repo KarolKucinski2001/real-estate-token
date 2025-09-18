@@ -36,7 +36,7 @@ describe("RealEstateToken", function () {
   it("prevents non-owners from changing price", async function () {
     await expect(
       tok.connect(buyer).setTokenPrice(parseUnits("0.01", "ether"))
-    ).to.be.revertedWithCustomError(tok, "OwnableUnauthorizedAccount");
+    ).to.be.revertedWith("Ownable: caller is not the owner");
   });
 
   it("allows transfer of tokens", async function () {
