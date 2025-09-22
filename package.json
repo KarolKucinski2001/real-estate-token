@@ -1,7 +1,7 @@
 {
   "name": "real-estate-token",
   "version": "1.0.0",
-  "description": "Smart kontrakt Real Estate Token (Hardhat + ethers v5 + OpenZeppelin)",
+  "description": "Smart kontrakt Real Estate Token (Hardhat + ethers v6 + OpenZeppelin)",
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",

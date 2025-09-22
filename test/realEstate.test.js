@@ -48,11 +48,10 @@ describe("RealEstateToken", function () {
     const initialSupply = await tok.totalSupply();
     await tok.connect(owner).burn(500);
     const finalSupply = await tok.totalSupply();
-    expect(finalSupply).to.equal(initialSupply - 500n); // bigint
+    expect(finalSupply).to.equal(initialSupply - 500n);
   });
 
   it("allows owner to withdraw ETH", async function () {
-    // buyer kupuje tokeny -> ETH trafia do kontraktu
     await tok.connect(buyer).buyTokens({ value: parseUnits("0.01", "ether") });
 
     const contractBalanceBefore = await ethers.provider.getBalance(tok.target);
